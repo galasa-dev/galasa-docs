@@ -10,26 +10,28 @@
       
       
       
-        <link rel="canonical" href="https://galasa.dev/">
+        <link rel="canonical" href="https://galasa.dev/docs/writing-own-tests/writing-test-classes/">
       
       
+        <link rel="prev" href="../../running-simbank-tests/writing-a-simbank-test/">
       
-        <link rel="next" href="about/">
+      
+        <link rel="next" href="../running-test-modes/">
       
       
-      <link rel="icon" href="assets/galasa-icon-white.svg">
+      <link rel="icon" href="../../../assets/galasa-icon-white.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
-        <title>Home - Galasa</title>
+        <title>Writing test classes - Galasa</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,9 +50,9 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#deep-integration-testing-for-zos-powered-hybrid-cloud-applications" class="md-skip">
+        <a href="#the-anatomy-of-a-galasa-test-class" class="md-skip">
           Skip to content
         </a>
       
@@ -92,9 +94,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Galasa" class="md-header__button md-logo" aria-label="Galasa" data-md-component="logo">
+    <a href="../../.." title="Galasa" class="md-header__button md-logo" aria-label="Galasa" data-md-component="logo">
       
-  <img src="assets/galasa-icon-white.svg" alt="logo">
+  <img src="../../../assets/galasa-icon-white.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -111,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Writing test classes
             
           </span>
         </div>
@@ -224,11 +226,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -251,7 +251,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="about/" class="md-tabs__link">
+        <a href="../../../about/" class="md-tabs__link">
           
   
   
@@ -271,11 +271,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="docs/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
           
   
   
@@ -299,7 +301,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="releases/" class="md-tabs__link">
+        <a href="../../../releases/" class="md-tabs__link">
           
   
   
@@ -323,7 +325,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="support/" class="md-tabs__link">
+        <a href="../../../support/" class="md-tabs__link">
           
   
   
@@ -347,7 +349,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="community/" class="md-tabs__link">
+        <a href="../../../community/" class="md-tabs__link">
           
   
   
@@ -371,7 +373,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="hub/" class="md-tabs__link">
+        <a href="../../../hub/" class="md-tabs__link">
           
   
   
@@ -404,9 +406,7 @@
           
             
               
-                
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -417,9 +417,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Galasa" class="md-nav__button md-logo" aria-label="Galasa" data-md-component="logo">
+    <a href="../../.." title="Galasa" class="md-nav__button md-logo" aria-label="Galasa" data-md-component="logo">
       
-  <img src="assets/galasa-icon-white.svg" alt="logo">
+  <img src="../../../assets/galasa-icon-white.svg" alt="logo">
 
     </a>
     Galasa
@@ -443,19 +443,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -468,7 +459,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -511,7 +501,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="about/" class="md-nav__link ">
+            <a href="../../../about/" class="md-nav__link ">
               
   
   
@@ -548,7 +538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="about/different/" class="md-nav__link">
+      <a href="../../../about/different/" class="md-nav__link">
         
   
   
@@ -571,7 +561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="about/automation/" class="md-nav__link">
+      <a href="../../../about/automation/" class="md-nav__link">
         
   
   
@@ -594,7 +584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="about/devops/" class="md-nav__link">
+      <a href="../../../about/devops/" class="md-nav__link">
         
   
   
@@ -617,7 +607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="about/history/" class="md-nav__link">
+      <a href="../../../about/history/" class="md-nav__link">
         
   
   
@@ -644,6 +634,8 @@
       
   
   
+    
+  
   
   
     
@@ -673,20 +665,23 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="docs/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   
@@ -701,13 +696,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Docs
@@ -755,10 +750,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -766,7 +764,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="docs/cli-command-reference/" class="md-nav__link ">
+            <a href="../../cli-command-reference/" class="md-nav__link ">
               
   
   
@@ -779,7 +777,7 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -801,7 +799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/cli-command-reference/cli-prereqs/" class="md-nav__link">
+      <a href="../../cli-command-reference/cli-prereqs/" class="md-nav__link">
         
   
   
@@ -824,7 +822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/cli-command-reference/zipped-prerequisites/" class="md-nav__link">
+      <a href="../../cli-command-reference/zipped-prerequisites/" class="md-nav__link">
         
   
   
@@ -847,7 +845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/cli-command-reference/installing-cli-tool/" class="md-nav__link">
+      <a href="../../cli-command-reference/installing-cli-tool/" class="md-nav__link">
         
   
   
@@ -870,7 +868,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/cli-command-reference/installing-offline/" class="md-nav__link">
+      <a href="../../cli-command-reference/installing-offline/" class="md-nav__link">
         
   
   
@@ -893,7 +891,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/cli-command-reference/cli-command-reference-about/" class="md-nav__link">
+      <a href="../../cli-command-reference/cli-command-reference-about/" class="md-nav__link">
         
   
   
@@ -916,7 +914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/cli-command-reference/initialising-home-folder/" class="md-nav__link">
+      <a href="../../cli-command-reference/initialising-home-folder/" class="md-nav__link">
         
   
   
@@ -939,7 +937,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/cli-command-reference/setting-up-galasa-project/" class="md-nav__link">
+      <a href="../../cli-command-reference/setting-up-galasa-project/" class="md-nav__link">
         
   
   
@@ -962,7 +960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/cli-command-reference/runs-submit-local/" class="md-nav__link">
+      <a href="../../cli-command-reference/runs-submit-local/" class="md-nav__link">
         
   
   
@@ -985,7 +983,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/cli-command-reference/runs-local-debug/" class="md-nav__link">
+      <a href="../../cli-command-reference/runs-local-debug/" class="md-nav__link">
         
   
   
@@ -1008,7 +1006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/cli-command-reference/viewing-test-results-cli/" class="md-nav__link">
+      <a href="../../cli-command-reference/viewing-test-results-cli/" class="md-nav__link">
         
   
   
@@ -1071,10 +1069,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -1082,7 +1083,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="docs/running-simbank-tests/" class="md-nav__link ">
+            <a href="../../running-simbank-tests/" class="md-nav__link ">
               
   
   
@@ -1095,7 +1096,7 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -1117,7 +1118,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/running-simbank-tests/simbank-cli/" class="md-nav__link">
+      <a href="../../running-simbank-tests/simbank-cli/" class="md-nav__link">
         
   
   
@@ -1140,7 +1141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/running-simbank-tests/simbank-cli-offline/" class="md-nav__link">
+      <a href="../../running-simbank-tests/simbank-cli-offline/" class="md-nav__link">
         
   
   
@@ -1163,7 +1164,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/running-simbank-tests/running-simbank-tests-cli/" class="md-nav__link">
+      <a href="../../running-simbank-tests/running-simbank-tests-cli/" class="md-nav__link">
         
   
   
@@ -1186,7 +1187,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/running-simbank-tests/running-simbank-tests-cli-offline/" class="md-nav__link">
+      <a href="../../running-simbank-tests/running-simbank-tests-cli-offline/" class="md-nav__link">
         
   
   
@@ -1209,7 +1210,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/running-simbank-tests/simbank-IVT/" class="md-nav__link">
+      <a href="../../running-simbank-tests/simbank-IVT/" class="md-nav__link">
         
   
   
@@ -1232,7 +1233,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/running-simbank-tests/basic-account-credit-test/" class="md-nav__link">
+      <a href="../../running-simbank-tests/basic-account-credit-test/" class="md-nav__link">
         
   
   
@@ -1255,7 +1256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/running-simbank-tests/provisioned-account-credit-tests/" class="md-nav__link">
+      <a href="../../running-simbank-tests/provisioned-account-credit-tests/" class="md-nav__link">
         
   
   
@@ -1278,7 +1279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/running-simbank-tests/batch-accounts-open-test/" class="md-nav__link">
+      <a href="../../running-simbank-tests/batch-accounts-open-test/" class="md-nav__link">
         
   
   
@@ -1301,7 +1302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/running-simbank-tests/web-app-integration-test/" class="md-nav__link">
+      <a href="../../running-simbank-tests/web-app-integration-test/" class="md-nav__link">
         
   
   
@@ -1324,7 +1325,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/running-simbank-tests/writing-a-simbank-test/" class="md-nav__link">
+      <a href="../../running-simbank-tests/writing-a-simbank-test/" class="md-nav__link">
         
   
   
@@ -1352,8 +1353,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -1372,18 +1375,21 @@
     
       
       
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
         
           
-          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
             
   
   
@@ -1396,7 +1402,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_4">
             <span class="md-nav__icon md-icon"></span>
             Writing your own independent Galasa tests
@@ -1407,10 +1413,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="docs/writing-own-tests/writing-test-classes/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Writing test classes
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1421,6 +1447,108 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-anatomy-of-a-galasa-test-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      The anatomy of a Galasa test class
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The anatomy of a Galasa test class">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#galasa-test-method-annotations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Galasa test method annotations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pitfalls-and-tips-when-writing-test-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pitfalls and tips when writing test code
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pitfalls and tips when writing test code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do-not-use-systemout-or-systemerr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do not use System.out or System.err
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keep-all-test-resources-within-the-test-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keep all test resources within the test project
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discovering-manager-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Discovering Manager resources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jvm-lifecycles" class="md-nav__link">
+    <span class="md-ellipsis">
+      JVM lifecycles
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1433,7 +1561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/writing-own-tests/running-test-modes/" class="md-nav__link">
+      <a href="../running-test-modes/" class="md-nav__link">
         
   
   
@@ -1456,7 +1584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/writing-own-tests/binding-tests/" class="md-nav__link">
+      <a href="../binding-tests/" class="md-nav__link">
         
   
   
@@ -1479,7 +1607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/writing-own-tests/key-principles/" class="md-nav__link">
+      <a href="../key-principles/" class="md-nav__link">
         
   
   
@@ -1502,7 +1630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/writing-own-tests/test-result-provider/" class="md-nav__link">
+      <a href="../test-result-provider/" class="md-nav__link">
         
   
   
@@ -1561,10 +1689,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -1572,7 +1703,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="docs/ecosystem/" class="md-nav__link ">
+            <a href="../../ecosystem/" class="md-nav__link ">
               
   
   
@@ -1585,7 +1716,7 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_5" id="__nav_3_5_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -1607,7 +1738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/ecosystem/architecture.md" class="md-nav__link">
+      <a href="../../ecosystem/architecture.md" class="md-nav__link">
         
   
   
@@ -1630,7 +1761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/ecosystem/role-based-access.md" class="md-nav__link">
+      <a href="../../ecosystem/role-based-access.md" class="md-nav__link">
         
   
   
@@ -1653,7 +1784,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/ecosystem/ecosystem-installing-k8s/" class="md-nav__link">
+      <a href="../../ecosystem/ecosystem-installing-k8s/" class="md-nav__link">
         
   
   
@@ -1676,7 +1807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/ecosystem/ecosystem-authentication/" class="md-nav__link">
+      <a href="../../ecosystem/ecosystem-authentication/" class="md-nav__link">
         
   
   
@@ -1699,7 +1830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/ecosystem/resources-yaml.md" class="md-nav__link">
+      <a href="../../ecosystem/resources-yaml.md" class="md-nav__link">
         
   
   
@@ -1722,7 +1853,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/ecosystem/ecosystem-manage-creds/" class="md-nav__link">
+      <a href="../../ecosystem/ecosystem-manage-creds/" class="md-nav__link">
         
   
   
@@ -1745,7 +1876,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/ecosystem/ecosystem-manage-cps/" class="md-nav__link">
+      <a href="../../ecosystem/ecosystem-manage-cps/" class="md-nav__link">
         
   
   
@@ -1768,7 +1899,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/ecosystem/ecosystem-managing-encryption-keys/" class="md-nav__link">
+      <a href="../../ecosystem/ecosystem-managing-encryption-keys/" class="md-nav__link">
         
   
   
@@ -1821,17 +1952,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
         
           
-          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="">
             
   
   
@@ -1858,7 +1992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/manage-ecosystem/test-streams" class="md-nav__link">
+      <a href="../../manage-ecosystem/test-streams" class="md-nav__link">
         
   
   
@@ -1881,7 +2015,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/manage-ecosystem/ecosystem-cli-runs-prepare" class="md-nav__link">
+      <a href="../../manage-ecosystem/ecosystem-cli-runs-prepare" class="md-nav__link">
         
   
   
@@ -1904,7 +2038,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/manage-ecosystem/ecosystem-cli-runs-submit" class="md-nav__link">
+      <a href="../../manage-ecosystem/ecosystem-cli-runs-submit" class="md-nav__link">
         
   
   
@@ -1927,7 +2061,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/manage-ecosystem/runs-reset-cancel" class="md-nav__link">
+      <a href="../../manage-ecosystem/runs-reset-cancel" class="md-nav__link">
         
   
   
@@ -1950,7 +2084,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/manage-ecosystem/cli-runs-get" class="md-nav__link">
+      <a href="../../manage-ecosystem/cli-runs-get" class="md-nav__link">
         
   
   
@@ -1973,7 +2107,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/manage-ecosystem/ecosystem-cli-runs-download" class="md-nav__link">
+      <a href="../../manage-ecosystem/ecosystem-cli-runs-download" class="md-nav__link">
         
   
   
@@ -1996,7 +2130,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/manage-ecosystem/cli-runs-delete" class="md-nav__link">
+      <a href="../../manage-ecosystem/cli-runs-delete" class="md-nav__link">
         
   
   
@@ -2039,10 +2173,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -2050,7 +2187,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="docs/upgrading/" class="md-nav__link ">
+            <a href="../../upgrading/" class="md-nav__link ">
               
   
   
@@ -2122,10 +2259,13 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
@@ -2133,7 +2273,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="docs/managers/" class="md-nav__link ">
+            <a href="../../managers/" class="md-nav__link ">
               
   
   
@@ -2146,7 +2286,7 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_8" id="__nav_3_8_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -2195,7 +2335,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="docs/managers/cics-ts-managers/" class="md-nav__link ">
+            <a href="../../managers/cics-ts-managers/" class="md-nav__link ">
               
   
   
@@ -2230,7 +2370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/managers/cics-ts-managers/cics-ts-ceci-manager/" class="md-nav__link">
+      <a href="../../managers/cics-ts-managers/cics-ts-ceci-manager/" class="md-nav__link">
         
   
   
@@ -2253,7 +2393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/managers/cics-ts-managers/cics-ts-manager/" class="md-nav__link">
+      <a href="../../managers/cics-ts-managers/cics-ts-manager/" class="md-nav__link">
         
   
   
@@ -2307,7 +2447,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="docs/managers/ims-tm-managers/" class="md-nav__link ">
+            <a href="../../managers/ims-tm-managers/" class="md-nav__link ">
               
   
   
@@ -2368,7 +2508,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="docs/managers/cloud-managers/" class="md-nav__link ">
+            <a href="../../managers/cloud-managers/" class="md-nav__link ">
               
   
   
@@ -2429,7 +2569,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="docs/managers/communications-managers/" class="md-nav__link ">
+            <a href="../../managers/communications-managers/" class="md-nav__link ">
               
   
   
@@ -2490,7 +2630,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="docs/managers/core-managers/" class="md-nav__link ">
+            <a href="../../managers/core-managers/" class="md-nav__link ">
               
   
   
@@ -2551,7 +2691,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="docs/managers/logging-managers/" class="md-nav__link ">
+            <a href="../../managers/logging-managers/" class="md-nav__link ">
               
   
   
@@ -2612,7 +2752,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="docs/managers/ecosystem-managers/" class="md-nav__link ">
+            <a href="../../managers/ecosystem-managers/" class="md-nav__link ">
               
   
   
@@ -2673,7 +2813,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="docs/managers/test-tool-managers/" class="md-nav__link ">
+            <a href="../../managers/test-tool-managers/" class="md-nav__link ">
               
   
   
@@ -2734,7 +2874,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="docs/managers/unix-managers/" class="md-nav__link ">
+            <a href="../../managers/unix-managers/" class="md-nav__link ">
               
   
   
@@ -2795,7 +2935,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="docs/managers/workflow-managers/" class="md-nav__link ">
+            <a href="../../managers/workflow-managers/" class="md-nav__link ">
               
   
   
@@ -2856,7 +2996,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="docs/managers/zos-managers/" class="md-nav__link ">
+            <a href="../../managers/zos-managers/" class="md-nav__link ">
               
   
   
@@ -2912,17 +3052,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
         
           
-          <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="">
             
   
   
@@ -2949,7 +3092,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docs/faqs-galasa.md" class="md-nav__link">
+      <a href="../../faqs-galasa.md" class="md-nav__link">
         
   
   
@@ -3012,7 +3155,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="releases/" class="md-nav__link ">
+            <a href="../../../releases/" class="md-nav__link ">
               
   
   
@@ -3049,7 +3192,7 @@
   
   
     <li class="md-nav__item">
-      <a href="releases/license/" class="md-nav__link">
+      <a href="../../../releases/license/" class="md-nav__link">
         
   
   
@@ -3102,7 +3245,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="support/" class="md-nav__link ">
+            <a href="../../../support/" class="md-nav__link ">
               
   
   
@@ -3164,7 +3307,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="community/" class="md-nav__link ">
+            <a href="../../../community/" class="md-nav__link ">
               
   
   
@@ -3230,7 +3373,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="hub/" class="md-nav__link ">
+            <a href="../../../hub/" class="md-nav__link ">
               
   
   
@@ -3322,7 +3465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="hub/archive/2024/" class="md-nav__link">
+      <a href="../../../hub/archive/2024/" class="md-nav__link">
         
   
   
@@ -3347,7 +3490,7 @@
   
   
     <li class="md-nav__item">
-      <a href="hub/archive/2023/" class="md-nav__link">
+      <a href="../../../hub/archive/2023/" class="md-nav__link">
         
   
   
@@ -3372,7 +3515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="hub/archive/2022/" class="md-nav__link">
+      <a href="../../../hub/archive/2022/" class="md-nav__link">
         
   
   
@@ -3397,7 +3540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="hub/archive/2021/" class="md-nav__link">
+      <a href="../../../hub/archive/2021/" class="md-nav__link">
         
   
   
@@ -3485,7 +3628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="hub/category/blog/" class="md-nav__link">
+      <a href="../../../hub/category/blog/" class="md-nav__link">
         
   
   
@@ -3510,7 +3653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="hub/category/podcast/" class="md-nav__link">
+      <a href="../../../hub/category/podcast/" class="md-nav__link">
         
   
   
@@ -3535,7 +3678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="hub/category/press-release/" class="md-nav__link">
+      <a href="../../../hub/category/press-release/" class="md-nav__link">
         
   
   
@@ -3560,7 +3703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="hub/category/redpaper/" class="md-nav__link">
+      <a href="../../../hub/category/redpaper/" class="md-nav__link">
         
   
   
@@ -3585,7 +3728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="hub/category/video/" class="md-nav__link">
+      <a href="../../../hub/category/video/" class="md-nav__link">
         
   
   
@@ -3624,8 +3767,6 @@
             
             
               
-                
-              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -3635,8 +3776,98 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-anatomy-of-a-galasa-test-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      The anatomy of a Galasa test class
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The anatomy of a Galasa test class">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#galasa-test-method-annotations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Galasa test method annotations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pitfalls-and-tips-when-writing-test-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pitfalls and tips when writing test code
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pitfalls and tips when writing test code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do-not-use-systemout-or-systemerr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do not use System.out or System.err
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keep-all-test-resources-within-the-test-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keep all test resources within the test project
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discovering-manager-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Discovering Manager resources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jvm-lifecycles" class="md-nav__link">
+    <span class="md-ellipsis">
+      JVM lifecycles
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -3649,12 +3880,10 @@
               <article class="md-content__inner md-typeset">
                 
                   
-  
-
 
 
   
-    <a href="https://github.com/galasa-dev/galasa/edit/main/docs/content/index.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/galasa-dev/galasa/edit/main/docs/content/docs/writing-own-tests/writing-test-classes.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -3663,60 +3892,75 @@
     
       
     
-    <a href="https://github.com/galasa-dev/galasa/raw/main/docs/content/index.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/galasa-dev/galasa/raw/main/docs/content/docs/writing-own-tests/writing-test-classes.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
   
 
 
-<div class="galasa-intro">
-<h1 id="deep-integration-testing-for-zos-powered-hybrid-cloud-applications">Deep integration testing for z/OS powered hybrid cloud applications<a class="headerlink" href="#deep-integration-testing-for-zos-powered-hybrid-cloud-applications" title="Permanent link">&para;</a></h1>
-<p>Allowing you to test applications at scale regardless of platform — including z/OS.</p>
-<p><a class="md-button md-button--primary" href="docs/">Get started</a>
-<a class="md-button" href="about/">Learn more</a>
-<a class="md-button" href="./releases/2025/05/06/v0.41.0/">0.41.0 highlights</a></p>
-</div>
-<div class="grid cards">
-<ul>
-<li>
-<p><strong>Consistent testing – for all technologies</strong></p>
-<hr />
-<p>You can write Galasa tests as a JUnit-style Java class and run them locally from your IDE or in automation without having to change a single line of code. Deep z/OS integration means you can verify data by interrogating the CICS application directly and gives you the ability to check other z/OS resources, such as messages on queues, without using stubs or mocking.</p>
-<p><img alt="" src="assets/images/key-features/illustrations-galasa-02.inline.svg" /></p>
-</li>
-<li>
-<p><strong>Focus on the test – not the integration problems</strong></p>
-<hr />
-<p>Galasa’s framework enables deep integration tests to be run across multiple technologies. One test case can interact with 3270, Selenium, JMeter, batch jobs and more. When you’re ready, Galasa integrates easily into your <a href="about/devops/">DevOps strategy</a>, and can be used alongside other test tools.</p>
-<p><img alt="" src="assets/images/key-features/illustrations-galasa-05.inline.svg" /></p>
-</li>
-<li>
-<p><strong>Get the test data you need – fast</strong></p>
-<hr />
-<p>Galasa can integrate with your test data strategy by helping you to provision new or existing test data records. Galasa can also lock test data so that many tests can run in parallel against the same test data pool, making it easy to repeat tests under identical conditions for swift debugging. Provisioned environments are automatically deprovisioned at test completion, leaving a clean test system state ready for the next tests.</p>
-<p><img alt="" src="assets/images/key-features/illustrations-galasa-03.inline.svg" /></p>
-</li>
-<li>
-<p><strong>See the big picture – from one location</strong></p>
-<hr />
-<p>Test results and artifacts are stored in a single location in a uniform style, enabling easy extraction of big picture information. A single place to search all test output makes it easy to quickly identify the cause of a failure and run tests locally to assist with debugging.</p>
-<p><img alt="" src="assets/images/key-features/illustrations-galasa-04.inline.svg" /></p>
-</li>
-<li>
-<p><strong>Test planning and recording – made easy</strong></p>
-<hr />
-<p>The ability to create a test catalog within Galasa means that you can easily define areas under test, enabling automation of even the most arduous manual tests and making it easy to record and plan what tests have run and what is left to do.</p>
-<p><img alt="" src="assets/images/key-features/illustrations-galasa-06.inline.svg" /></p>
-</li>
-<li>
-<p><strong>Keep on growing – Galasa grows with you</strong></p>
-<hr />
-<p>Galasa is open source, so can be extended to support additional tooling with no vendor lock-in and no initial cost. The framework supports enterprise level throughput, as the test workload can be scaled horizontally in its own cloud environment.</p>
-<p><img alt="" src="assets/images/key-features/illustrations-galasa-07.inline.svg" /></p>
-</li>
-</ul>
-</div>
+  <h1>Writing test classes</h1>
+
+<p>Having created your project structure and built the parent and sub-projects, you are ready to start writing your own test classes.</p>
+<h2 id="the-anatomy-of-a-galasa-test-class">The anatomy of a Galasa test class<a class="headerlink" href="#the-anatomy-of-a-galasa-test-class" title="Permanent link">&para;</a></h2>
+<p>Some classes have <code>internal</code> as part of their package name. Such classes are not intended to be used in test code, and if you try doing so then at run-time you are likely to experience <code>Class not found</code> errors. This might be especially pertinent if an IDE, for example Eclipse, shows such classes in auto-complete drop-downs.</p>
+<p>All Galasa tests must have a <code>@Test</code> annotation (<code>dev.galasa.Test</code>) defined and in place for it to be recognised by Galasa. Doing this allows the Galasa Maven plugin to differentiate between test and utility classes within a project. Only classes that use <code>@Test</code> are included in the test catalog.</p>
+<p>Once loaded by the Galasa test runner, there are a few further annotations that dictate how a test is executed. These are <code>@BeforeClass</code>, <code>@Before</code>, <code>@Test</code>, <code>@After</code> and <code>@AfterClass</code>. These are visually similar to how they appear in JUnit, but are handled differently in Galasa.</p>
+<h3 id="galasa-test-method-annotations">Galasa test method annotations<a class="headerlink" href="#galasa-test-method-annotations" title="Permanent link">&para;</a></h3>
+<p><strong><code>@Test</code></strong>
+<br>
+This annotation identifies a method as one that contains test code. Such methods are executed by Galasa by the order in which they appear in the test class - from top to bottom. If a test method fails, the following test methods are bypassed to encourage short, sharp parallel testing. This behaviour can be overridden using the <code>@ContinueOnTestFailure</code> annotation on the <code>class</code> statement.</p>
+<p>When a test method succeeds it is marked as PASSED, and if there is an exception it is marked FAILED. Managers can override this marking - for example, if a test throws a specific exception, a Manager could set the result to DISASTER.</p>
+<p><strong><code>@BeforeClass</code> and <code>@AfterClass</code></strong>
+<br>
+Methods marked <code>@Beforeclass</code> and <code>@AfterClass</code> are executed once before and once after all tests in the class respectively. They are executed in the order they appear in the sources.</p>
+<p>Such methods are used to perform setup and tear-down for the test class, for example, setting up an HTTP server that all of the <code>@Test</code> methods will use.</p>
+<p>Unlike JUnit, these are not static methods as they need access to some <em>class fields</em>/<em>manager annotated fields</em> which are described later.</p>
+<p>Failures that occur in <code>@BeforeClass</code> and <code>@AfterClass</code> usually cause tests to fail with <code>ENVIRONMENT_FAILURE</code>, which indicates that the test itself didn't fail, but the set up did for some reason. For this reason, <code>@BeforeClass</code> and <code>@AfterClass</code> should not contain any test code.</p>
+<p><strong><code>@Before</code></strong> and <strong><code>@After</code></strong>
+<br>
+Methods marked <code>@Before</code> and <code>@After</code> are executed before and after every <code>@Test</code> method respectively, in the order in which they appear in the source.</p>
+<p>These methods are typically used to reset resources before a test or perhaps check logs for post-test error messages.</p>
+<p>Failures that occur in <code>@Before</code> and <code>@After</code> result in the test method being marked as FAILED, as it is likely that such methods contain test checking code.</p>
+<p><strong>Manager annotated fields</strong>
+<br>
+Before any of the <code>@</code> methods in a test class are executed, the Galasa test runner requests any active Managers to populate their <em>test fields</em> with appropriate values. These fields are highly-dependent on the Managers, and you will need to review the Manager reference documentation to appreciate what is available.</p>
+<p>As an example, the test field</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nd">@RunName</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">runName</span><span class="p">;</span>
+</code></pre></div>
+<p>is provided by the Core Manager. This populates the <code>runName</code> field with a String representing the run's name, which can be used to create a unique resource name that won't clash with other runs.</p>
+<p>The framework ensures that all correctly coded fields are filled before executing any test code, so test code doesn't need to bother itself with validating the fields themselves. If a field cannot be populated by a Manager, the test is marked either as <code>ENVIRONMENT_FAILURE</code>, or as <code>RESOURCE_EXHAUSTION</code> in which case an automated rerun is queued.</p>
+<p>A few Managers provide direct access to themselves, for example the Core Manager:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nd">@CoreManager</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kd">public</span><span class="w"> </span><span class="n">ICoreManager</span><span class="w"> </span><span class="n">coreManager</span><span class="p">;</span>
+</code></pre></div>
+<p>The Core Manager provides a method to obtain credentials via an ID - but the test may not know the ID before it runs, so it would be difficult to do this via an annotated field.</p>
+<h2 id="example-tests">Example tests<a class="headerlink" href="#example-tests" title="Permanent link">&para;</a></h2>
+<p>Review the SimBank sample tests to see how these principles are applied in practice. With one or two exceptions, these sample tests will be kept up to date with the latest specifications.</p>
+<h2 id="pitfalls-and-tips-when-writing-test-code">Pitfalls and tips when writing test code<a class="headerlink" href="#pitfalls-and-tips-when-writing-test-code" title="Permanent link">&para;</a></h2>
+<h3 id="do-not-use-systemout-or-systemerr">Do not use <code>System.out</code> or <code>System.err</code><a class="headerlink" href="#do-not-use-systemout-or-systemerr" title="Permanent link">&para;</a></h3>
+<p>Although using <code>System.out.println</code> may be satisfactory when running tests locally, these messages will be lost if running in automation. Use a logger instead. The Core Manager provides an annotated field to make this straightforward:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nd">@Logger</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kd">public</span><span class="w"> </span><span class="n">Log</span><span class="w"> </span><span class="n">Logger</span><span class="p">;</span>
+</code></pre></div>
+<p>and then:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">logger</span><span class="p">.</span><span class="na">info</span><span class="p">(</span><span class="s">&quot;This is a message&quot;</span><span class="p">);</span>
+</code></pre></div>
+<p>Any message written using this method is saved in the run log.</p>
+<h3 id="keep-all-test-resources-within-the-test-project">Keep all test resources within the test project<a class="headerlink" href="#keep-all-test-resources-within-the-test-project" title="Permanent link">&para;</a></h3>
+<p>When diagnosing or maintaining a test project, it is helpful if all the resources it consumes are within the same project - examples include JCL, or Db2 DDL. While it is possible to keep resources with the target environment, it makes portability an issue. If your test runs against, say, a remote server MVS1, and MVS1 contains some resources such as JCL, it is fine if you remain on MVS1 only. If you later decide to run the test on MVS2, you will need to copy all the resources across before you can run your test. A better solution is to keep the resources within the current test project and deploy them as part of the test run.</p>
+<p>You can access resources in a test project using the Artifact Manager:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nd">@BundleResources</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kd">public</span><span class="w"> </span><span class="n">IBundleResources</span><span class="w"> </span><span class="n">bundleResources</span><span class="p">;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">InputStream</span><span class="w"> </span><span class="n">resource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bundleResources</span><span class="p">.</span><span class="na">retrieveFile</span><span class="p">(</span><span class="s">&quot;job.jcl&quot;</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="discovering-manager-resources">Discovering Manager resources<a class="headerlink" href="#discovering-manager-resources" title="Permanent link">&para;</a></h3>
+<p>The best way to learn what fields, annotations and methods that a Manager provides is to use the Manager reference pages on this site. Auto-completion and Javadoc are also great resources when you know what you are looking for. The Manager reference pages contain code snippets and describe what fields and annotations apply to each Manager. The source code for the Managers can be found in the Github Managers repository - where you can also usually find an Installation Verification Test (VT) project for each Manager.</p>
+<p>All Managers should comply with a naming standard, although it is not currently enforced. The Java bundle name tends to be <code>dev.galasa.managerid.manager</code> where <code>managerid</code> is the name of the Manager - for example <code>dev.galasa.core.manager</code>. Inside the bundle is the TPI (Tester Programming Interface) package, which tends to be named <code>dev.galasa.managerid</code> and includes all the annotations and interfaces a tester can employ to use the Manager. A test should never use any resource in a package with <code>internal</code> or <code>spi</code> in its name. By using these same naming conventions, you can use autocompletion and/or javadoc to locate Manager functionality across the project.</p>
+<h3 id="jvm-lifecycles">JVM lifecycles<a class="headerlink" href="#jvm-lifecycles" title="Permanent link">&para;</a></h3>
+<p>Galasa tests run in Java and use a JVM to execute. JVMs only exist for the life of the test - this is to avoid problems with memory leaks and resource locking between test runs. Because of this, a test can start threads, lock resources and so on without worrying too much about cleaning up.</p>
 
 
 
@@ -3729,8 +3973,6 @@
 
 
 
-
-  
 
 
 
@@ -3754,19 +3996,33 @@
   
     
       
-        
-      
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../running-simbank-tests/writing-a-simbank-test/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Writing your own SimBank test">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Writing your own SimBank test
+              </div>
+            </div>
+          </a>
         
         
           
-          <a href="about/" class="md-footer__link md-footer__link--next" aria-label="Next: About Galasa">
+          <a href="../running-test-modes/" class="md-footer__link md-footer__link--next" aria-label="Next: Running a Galasa test">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                About Galasa
+                Running a Galasa test
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -3832,10 +4088,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": ".", "features": ["content.code.copy", "content.action.edit", "content.action.view", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "toc.follow"], "search": "assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "content.action.edit", "content.action.view", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "toc.follow"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
     
   </body>
