@@ -42,12 +42,6 @@
     
     
       
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-      
     
     
       <link rel="stylesheet" href="../../../../assets/stylesheets/extra.css">
@@ -1509,7 +1503,7 @@
   
   
   <span class="md-ellipsis">
-    Controlling code execution after test failure
+    Controlling code execution based on test results so far
     
   </span>
   
@@ -3324,18 +3318,6 @@
       
         
       
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
     
     
     
@@ -3455,29 +3437,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../managers/zos-managers/z-os-file-manager.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    None
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../managers/zos-managers/zos-file-rse-api-manager/" class="md-nav__link">
         
   
@@ -3501,81 +3460,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../managers/zos-managers/z-os-file-zos-mf-manager.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    None
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../managers/zos-managers/zos-batch-manager.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    None
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../managers/zos-managers/zos-batch-zos-mf-manager/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     z/OS Batch z/OS MF Manager
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../managers/zos-managers/zos-console-manager.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    None
     
   </span>
   
@@ -3639,29 +3529,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../managers/zos-managers/zos-file-manager.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    None
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../managers/zos-managers/zos-file-zos-mf-manager/" class="md-nav__link">
         
   
@@ -3691,29 +3558,6 @@
   
   <span class="md-ellipsis">
     z/OS Manager
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../managers/zos-managers/zos-managertestformat.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    None
     
   </span>
   
@@ -6263,7 +6107,7 @@
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>      --debug                  When set (or true) the debugger pauses on startup and tries to connect to a Java debugger. The connection is established using the --debugMode and --debugPort values.
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>      --debugMode string       The mode to use when the --debug option causes the testcase to connect to a Java debugger. Valid values are &#39;listen&#39; or &#39;attach&#39;. &#39;listen&#39; means the testcase JVM will pause on startup, waiting for the Java debugger to connect to the debug port (see the --debugPort option). &#39;attach&#39; means the testcase JVM will pause on startup, trying to attach to a java debugger which is listening on the debug port. The default value is &#39;listen&#39; but can be overridden by the &#39;galasactl.jvm.local.launch.debug.mode&#39; property in the bootstrap file, which in turn can be overridden by this explicit parameter on the galasactl command.
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>      --debugPort uint32       The port to use when the --debug option causes the testcase to connect to a java debugger. The default value used is 2970 which can be overridden by the &#39;galasactl.jvm.local.launch.debug.port&#39; property in the bootstrap file, which in turn can be overridden by this explicit parameter on the galasactl command.
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>      --galasaVersion string   the version of galasa you want to use to run your tests. This should match the version of the galasa obr you built your test bundles against. (default &quot;0.42.0&quot;)
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>      --galasaVersion string   the version of galasa you want to use to run your tests. This should match the version of the galasa obr you built your test bundles against. (default &quot;0.43.0&quot;)
 <a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>      --gherkin strings        Gherkin feature file URL. Should start with &#39;file://&#39;. 
 <a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>  -h, --help                   Displays the options for the &#39;runs submit local&#39; command.
 <a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>      --localMaven string      The url of a local maven repository are where galasa bundles can be loaded from on your local file system. Defaults to your home .m2/repository file. Please note that this should be in a URL form e.g. &#39;file:///Users/myuserid/.m2/repository&#39;, or &#39;file://C:/Users/myuserid/.m2/repository&#39;
@@ -6295,7 +6139,7 @@
 <ul>
 <li><a href="../galasactl_runs_submit/">galasactl runs submit</a>  - submit a list of tests to the ecosystem</li>
 </ul>
-<h6 id="auto-generated-by-spf13cobra-on-12-jun-2025">Auto generated by spf13/cobra on 12-Jun-2025<a class="headerlink" href="#auto-generated-by-spf13cobra-on-12-jun-2025" title="Permanent link">&para;</a></h6>
+<h6 id="auto-generated-by-spf13cobra-on-14-aug-2025">Auto generated by spf13/cobra on 14-Aug-2025<a class="headerlink" href="#auto-generated-by-spf13cobra-on-14-aug-2025" title="Permanent link">&para;</a></h6>
 
 
 
@@ -6378,14 +6222,10 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; Open Mainframe Project
+      Copyright &copy; Open Mainframe Project - A Series of LF Projects, LLC  <br/>For web site terms of use, privacy policy, trademark policy and general project policies please see <a href="https://lfprojects.org">https://lfprojects.org</a> <br/><a href="#__consent">Change cookie settings</a>
+
     </div>
   
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
   
 </div>
       
@@ -6424,6 +6264,66 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, and to enhance the experience when interacting with Github. For more detail see our notes on <a href="https://github.com/galasa-dev/galasa/blob/main/docs/cookies.md">cookie usage</a>.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="github" checked>
+      <span class="task-list-indicator"></span>
+      GitHub
+    </label>
+  </li>
+
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
     
     
       
