@@ -1461,6 +1461,8 @@
       
         
       
+        
+      
     
     
     
@@ -1609,6 +1611,29 @@
   
   <span class="md-ellipsis">
     Controlling code execution based on test results so far
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../writing-own-tests/running-resource-cleanup-locally/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to clean up resources after local runs exit abnormally
     
   </span>
   
@@ -6114,7 +6139,7 @@
 Local runs do not benefit from the features that are provided when running tests within a Galasa Ecosystem. For example, resources are not cleaned-up in the event of a failure and scaling capabilities are limited by workstation resources. </p>
 <h2 id="working-with-the-runs-submit-local-command">Working with the <code>runs submit local</code> command<a class="headerlink" href="#working-with-the-runs-submit-local-command" title="Permanent link">&para;</a></h2>
 <p>To use the <code>galasactl runs submit local</code> command, the <code>JAVA_HOME</code> environment variable must be set to reference the JVM in which you want the test to run, as described in the <a href="../cli-prereqs/">CLI prerequisites online</a> and <a href="../zipped-prerequisites/">CLI prerequisites offline</a> documentation. This is because the local java run-time environment is used to launch the test locally. To check that <code>JAVA_HOME</code> is set correctly, the tool checks that <code>$JAVA_HOME/bin/java</code> exists in Unix or Mac, and <code>%JAVA_HOME%\bin\java.exe</code> exists on Windows.</p>
-<p>The level of Java must match the supported level of the Galasa version that is being launched. Use the <code>galasactl --version</code> command to find the galasactl tool version. We currently support Java version 11 to version 17 JDK. <em>Note:</em> We do not currently support Java 21 or later.</p>
+<p>The level of Java must match the supported level of the Galasa version that is being launched. Use the <code>galasactl --version</code> command to find the galasactl tool version. We currently support Java version 17 JDK. <em>Note:</em> We do not currently support Java 21 or later.</p>
 <p>To view the full list of options that are available, see the <a href="../../reference/cli-syntax/galasactl_runs_submit_local/">galasactl runs submit local</a> command reference.</p>
 <h2 id="running-a-java-test-with-the-runs-submit-local-command">Running a Java test with the <code>runs submit local</code> command<a class="headerlink" href="#running-a-java-test-with-the-runs-submit-local-command" title="Permanent link">&para;</a></h2>
 <p>Use the following command to run a Java test in the local JVM.</p>
@@ -6149,7 +6174,7 @@ Local runs do not benefit from the features that are provided when running tests
 <li><code>--log</code> specifies that debugging information is directed somewhere, and the <code>-</code> means that it is sent to the console (stderr).</li>
 <li><code>--gherkin</code> specifies the path where the  CLI tool can find the Gherkin file containing the Gherkin tests. The path must be specified in a URL form, ending in a <code>.feature</code> extension. For example,<code>file:///Users/myuserid/gherkin/MyGherkinFile.feature</code> or <code>file:///C:/Users/myuserid/gherkin/MyGherkinFile.feature</code>.</li>
 </ul>
-<p>For more information about the Gherkin support currently available, see the <a href="https://github.com/galasa-dev/cli/blob/main/gherkin-docs.md" target="_blank">Galasa CLI Gherkin documentation</a>.</p>
+<p>For more information about the Gherkin support currently available, see the <a href="https://github.com/galasa-dev/galasa/blob/main/modules/cli/gherkin-docs.md" target="_blank">Galasa CLI Gherkin documentation</a>.</p>
 <h2 id="overriding-the-path-to-the-default-local-maven-repository">Overriding the path to the default local Maven repository<a class="headerlink" href="#overriding-the-path-to-the-default-local-maven-repository" title="Permanent link">&para;</a></h2>
 <p>In order to run, tests require compiled artifacts to be hosted in a Maven repository. The artifacts must be bundled as an OSGI bundle. When you build a Galasa project locally, the built artifacts are placed by default in the <code>~/.m2/</code> repository in your home directory; the default location of the local Maven repository.  </p>
 <p>If you want to use a non-standard location for your local Maven repository when running a test locally, rather than the default <code>~/.m2/</code> repository, you can specify the path to your non-standard local Maven repository folder when launching a test by setting the  <code>--localMaven</code> flag on the <code>galasactl runs submit local</code> command. The <code>--localMaven</code> parameter tells the CLI tool where Galasa bundles can be loaded from on your local file system. The parameter value must be given in a URL form, for example, <code>file:///Users/myuserid/mylocalrepository</code> or <code>file:///C:/Users/myuserid/mylocalrepository</code>.</p>

@@ -1463,6 +1463,8 @@
       
         
       
+        
+      
     
     
     
@@ -1611,6 +1613,29 @@
   
   <span class="md-ellipsis">
     Controlling code execution based on test results so far
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../writing-own-tests/running-resource-cleanup-locally/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to clean up resources after local runs exit abnormally
     
   </span>
   
@@ -6156,7 +6181,7 @@
 <p>Complete the following steps to build a Docker image called <code>simbank-webapp</code> to use in the test. We plan to automate these manual steps in a future release. </p>
 <ol>
 <li>If you have not done so already, clone the Galasa <code>simplatform</code> repository on your machine by running the following command in the directory on your local machine in which you want to clone the repository files: 
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git clone https://github.com/galasa-dev/simplatform.git --branch v0.44.0 --single-branch
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git clone https://github.com/galasa-dev/simplatform.git --branch v0.45.0 --single-branch
 </code></pre></div></li>
 <li>Build the image and test that the container is working correctly by running the following commands. For the commands to work, the terminal must be running in the same directory as the one that contains the Dockerfile. The Dockerfile is located in the <a href="https://github.com/galasa-dev/simplatform/tree/main/galasa-simplatform-application/galasa-simplatform-webapp">galasa-simplatform-webapp directory</a> in the Galasa <code>simplatform</code> repository.
     <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>mvn install
@@ -6166,7 +6191,7 @@
 <li>Access the Galasa SimBank web application from <code>http://localhost:8080/galasa-simplatform-webapp/simbank</code></li>
 </ol>
 <h3 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h3>
-<p>If the container is not working correctly, for example, compilation and runtime errors are returned, check the version of tomcat in the Dockerfile. You might need to edit the tomcat version to a version that is compatible with Java 11, for example, <code>FROM tomcat:8.5.82-jre11-temurin</code>.</p>
+<p>If the container is not working correctly, for example, compilation and runtime errors are returned, check the version of tomcat in the Dockerfile. You might need to edit the tomcat version to a version that is compatible with the <code>javax.servlet.*</code> API and Java 17, for example, <code>FROM tomcat:9-jre17-temurin</code>.</p>
 <h2 id="walkthrough-webappintegrationtest">Walkthrough - WebAppIntegrationTest<a class="headerlink" href="#walkthrough-webappintegrationtest" title="Permanent link">&para;</a></h2>
 <p>To run the test, follow the same steps as for <code>SimBankIVT.java</code> but using the test class name <code>WebAppIntegrationTest</code> instead of <code>SimBankIVT</code>. </p>
 <p>For brevity, package declarations and imports are omitted in the following walkthrough.</p>

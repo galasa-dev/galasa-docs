@@ -1421,6 +1421,8 @@
       
         
       
+        
+      
     
     
     
@@ -1569,6 +1571,29 @@
   
   <span class="md-ellipsis">
     Controlling code execution based on test results so far
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../writing-own-tests/running-resource-cleanup-locally/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to clean up resources after local runs exit abnormally
     
   </span>
   
@@ -6038,7 +6063,7 @@
 <li>A test that uses a provisioned account object to perform the same test as <code>BasicAccountCreditTest.java</code> in an improved test design - <code>ProvisionedAccountCreditTests.java</code>.</li>
 <li>A test that exercises the z/OS Batch Manager by simulating the submission of a JCL job to add a number of accounts to the SimBank system - <code>BatchAccountsOpenTest.java</code>.</li>
 </ul>
-<p>The following sections explain how to run the <code>SimBankIVT</code> test class by using the CLI. Make sure that you have installed the Galasa CLI tool and Java version 11 JDK, and have set the JAVA_HOME environment variable, as described in the <a href="../../cli-command-reference/zipped-prerequisites/">CLI prerequisites offline</a> documentation. </p>
+<p>The following sections explain how to run the <code>SimBankIVT</code> test class by using the CLI. Make sure that you have installed the Galasa CLI tool and Java version 17 JDK, and have set the JAVA_HOME environment variable, as described in the <a href="../../cli-command-reference/zipped-prerequisites/">CLI prerequisites offline</a> documentation. </p>
 <h2 id="updating-the-overrides-and-credentials-property-files">Updating the overrides and credentials property files<a class="headerlink" href="#updating-the-overrides-and-credentials-property-files" title="Permanent link">&para;</a></h2>
 <p>In order to run the Galasa SimBanks tests you need to add some configuration information in the <code>overrides.properties</code> and <code>credentials.properties</code> files that were created when you initialised your Galasa home folder by running the <code>galasactl local init</code> command. Complete the following steps to edit the files:</p>
 <ol>
@@ -6070,7 +6095,7 @@
 </li>
 </ol>
 <h2 id="running-the-simbank-ivt-test-class-by-using-the-cli">Running the SimBank IVT test class by using the CLI<a class="headerlink" href="#running-the-simbank-ivt-test-class-by-using-the-cli" title="Permanent link">&para;</a></h2>
-<p>The SimBank tests are located in the <code>maven</code> directory of the <code>isolated.zip</code> downloadable file. Complete the following steps to run the SimBankIVT test that is provided with Galasa. The following example uses SimBank OBR version <code>0.44.0</code>.</p>
+<p>The SimBank tests are located in the <code>maven</code> directory of the <code>isolated.zip</code> downloadable file. Complete the following steps to run the SimBankIVT test that is provided with Galasa. The following example uses SimBank OBR version <code>0.45.0</code>.</p>
 <p>Remember to initialise your local environment by running the <code>galasactl local init</code> command and to start the SimPlatform server by running the <code>run-simplatform.sh</code> script, as described in the <a href="../simbank-cli-offline/">Running Galasa SimBank using the CLI offline</a> documentation.</p>
 <p>You are now ready to run a local Galasa test offline with just the contents of the zipped distribution.</p>
 <ol>
@@ -6078,13 +6103,13 @@
 <p>Open a terminal and run the SimBankIVT test locally by using the following example command, remembering to update the <code>--localMaven</code> flag value to the location of the <code>maven</code> directory that is provided as part of the <em>isolated.zip</em>  file that you downloaded:
     On Mac or Unix:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>galasactl<span class="w"> </span>runs<span class="w"> </span>submit<span class="w"> </span><span class="nb">local</span><span class="w"> </span>--log<span class="w"> </span>-<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>--obr<span class="w"> </span>mvn:dev.galasa/dev.galasa.simbank.obr/0.44.0/obr<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>--obr<span class="w"> </span>mvn:dev.galasa/dev.galasa.simbank.obr/0.45.0/obr<span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>--class<span class="w"> </span>dev.galasa.simbank.tests/dev.galasa.simbank.tests.SimBankIVT<span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>--localMaven<span class="w"> </span>file:////Users/youruserid/Downloads/isolated/maven
 </code></pre></div>
 <p>On Windows (Powershell):</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">galasactl</span> <span class="n">runs</span> <span class="n">submit</span> <span class="n">local</span> <span class="p">-</span><span class="n">-log</span> <span class="p">-</span> <span class="p">`</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="p">-</span><span class="n">-obr</span> <span class="n">mvn</span><span class="p">:</span><span class="n">dev</span><span class="p">.</span><span class="n">galasa</span><span class="p">/</span><span class="n">dev</span><span class="p">.</span><span class="n">galasa</span><span class="p">.</span><span class="n">simbank</span><span class="p">.</span><span class="n">obr</span><span class="p">/</span><span class="n">0</span><span class="p">.</span><span class="n">44</span><span class="p">.</span><span class="n">0</span><span class="p">/</span><span class="n">obr</span> <span class="p">`</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="p">-</span><span class="n">-obr</span> <span class="n">mvn</span><span class="p">:</span><span class="n">dev</span><span class="p">.</span><span class="n">galasa</span><span class="p">/</span><span class="n">dev</span><span class="p">.</span><span class="n">galasa</span><span class="p">.</span><span class="n">simbank</span><span class="p">.</span><span class="n">obr</span><span class="p">/</span><span class="n">0</span><span class="p">.</span><span class="n">45</span><span class="p">.</span><span class="n">0</span><span class="p">/</span><span class="n">obr</span> <span class="p">`</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">-</span><span class="n">-class</span> <span class="n">dev</span><span class="p">.</span><span class="n">galasa</span><span class="p">.</span><span class="n">simbank</span><span class="p">.</span><span class="n">tests</span><span class="p">/</span><span class="n">dev</span><span class="p">.</span><span class="n">galasa</span><span class="p">.</span><span class="n">simbank</span><span class="p">.</span><span class="n">tests</span><span class="p">.</span><span class="n">SimBankIVT</span> <span class="p">`</span>
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">-</span><span class="n">-localMaven</span> <span class="n">file</span><span class="p">:////</span><span class="n">Users</span><span class="p">/</span><span class="n">youruserid</span><span class="p">/</span><span class="n">Downloads</span><span class="p">/</span><span class="n">isolated</span><span class="p">/</span><span class="n">maven</span>
 </code></pre></div>
@@ -6100,13 +6125,13 @@
 <p>To run other SimBank tests, for example <code>BasicAccountCreditTest</code>, replace the test class name in the <code>--class</code> parameter. Remember to update the <code>--localMaven</code> flag value to the location of the <code>maven</code> directory as well. For example: </p>
 <p>On Mac or Unix:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>galasactl<span class="w"> </span>runs<span class="w"> </span>submit<span class="w"> </span><span class="nb">local</span><span class="w"> </span>--log<span class="w"> </span>-<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>--obr<span class="w"> </span>mvn:dev.galasa/dev.galasa.simbank.obr/0.44.0/obr<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>--obr<span class="w"> </span>mvn:dev.galasa/dev.galasa.simbank.obr/0.45.0/obr<span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>--class<span class="w"> </span>dev.galasa.simbank.tests/dev.galasa.simbank.tests.BasicAccountCreditTest<span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>--localMaven<span class="w"> </span>file:////Users/youruserid/Downloads/isolated/maven
 </code></pre></div>
 <p>On Windows (Powershell):</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">galasactl</span> <span class="n">runs</span> <span class="n">submit</span> <span class="n">local</span> <span class="p">-</span><span class="n">-log</span> <span class="p">-</span> <span class="p">`</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="p">-</span><span class="n">-obr</span> <span class="n">mvn</span><span class="p">:</span><span class="n">dev</span><span class="p">.</span><span class="n">galasa</span><span class="p">/</span><span class="n">dev</span><span class="p">.</span><span class="n">galasa</span><span class="p">.</span><span class="n">simbank</span><span class="p">.</span><span class="n">obr</span><span class="p">/</span><span class="n">0</span><span class="p">.</span><span class="n">44</span><span class="p">.</span><span class="n">0</span><span class="p">/</span><span class="n">obr</span> <span class="p">`</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="p">-</span><span class="n">-obr</span> <span class="n">mvn</span><span class="p">:</span><span class="n">dev</span><span class="p">.</span><span class="n">galasa</span><span class="p">/</span><span class="n">dev</span><span class="p">.</span><span class="n">galasa</span><span class="p">.</span><span class="n">simbank</span><span class="p">.</span><span class="n">obr</span><span class="p">/</span><span class="n">0</span><span class="p">.</span><span class="n">45</span><span class="p">.</span><span class="n">0</span><span class="p">/</span><span class="n">obr</span> <span class="p">`</span>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="p">-</span><span class="n">-class</span> <span class="n">dev</span><span class="p">.</span><span class="n">galasa</span><span class="p">.</span><span class="n">simbank</span><span class="p">.</span><span class="n">tests</span><span class="p">/</span><span class="n">dev</span><span class="p">.</span><span class="n">galasa</span><span class="p">.</span><span class="n">simbank</span><span class="p">.</span><span class="n">tests</span><span class="p">.</span><span class="n">BasicAccountCreditTest</span> <span class="p">`</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">-</span><span class="n">-localMaven</span> <span class="n">file</span><span class="p">:////</span><span class="n">Users</span><span class="p">/</span><span class="n">youruserid</span><span class="p">/</span><span class="n">Downloads</span><span class="p">/</span><span class="n">isolated</span><span class="p">/</span><span class="n">maven</span>
 </code></pre></div>
