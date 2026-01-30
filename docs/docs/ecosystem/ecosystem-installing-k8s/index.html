@@ -1727,6 +1727,30 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#supported-kubernetes-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported Kubernetes Versions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Supported Kubernetes Versions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#kubernetes-role-based-access-control" class="md-nav__link">
     <span class="md-ellipsis">
       Kubernetes role-based access control
@@ -6095,6 +6119,30 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#supported-kubernetes-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported Kubernetes Versions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Supported Kubernetes Versions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#kubernetes-role-based-access-control" class="md-nav__link">
     <span class="md-ellipsis">
       Kubernetes role-based access control
@@ -6310,11 +6358,65 @@
 <p>The Kubernetes command-line tool <em>kubectl</em> must be installed on the machine that is used to run the commands and must be configured to point at your Kubernetes cluster. To find out more about Kubernetes, see the <a href="https://kubernetes.io/docs/home/" target="_blank">Kubernetes Documentation</a>.</p>
 </li>
 <li>
-<p>You must have a Kubernetes cluster at version 1.16 or higher. You can check the version number by running the <code>kubectl version</code> command.</p>
+<p>You must have a Kubernetes cluster at version 1.28 or higher. You can check the version number by running the <code>kubectl version</code> command. See the <a href="#supported-kubernetes-versions">Supported Kubernetes Versions</a> section for a table of Kubernetes versions that are compatible with recent Galasa releases.</p>
 </li>
 <li>
 <p>If you want to install the chart into minikube, ensure you have minikube installed and that it is running with <code>minikube status</code>. If minikube is not running, start it by running <code>minikube start</code>. Once minikube is running, follow the instructions in the following sections to install the Galasa Ecosystem Helm chart.</p>
 </li>
+</ul>
+<h2 id="supported-kubernetes-versions">Supported Kubernetes Versions<a class="headerlink" href="#supported-kubernetes-versions" title="Permanent link">&para;</a></h2>
+<p>The following table shows the minimum and maximum Kubernetes versions supported for each Galasa release:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Galasa Version</strong></th>
+<th><strong>Minimum Kubernetes Version</strong></th>
+<th><strong>Maximum Kubernetes Version</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.46.0</td>
+<td>1.28</td>
+<td>1.34</td>
+</tr>
+<tr>
+<td>0.45.0</td>
+<td>1.28</td>
+<td>1.34</td>
+</tr>
+<tr>
+<td>0.44.0</td>
+<td>1.28</td>
+<td>1.34</td>
+</tr>
+<tr>
+<td>0.43.0</td>
+<td>1.28</td>
+<td>1.33</td>
+</tr>
+<tr>
+<td>0.42.0</td>
+<td>1.28</td>
+<td>1.33</td>
+</tr>
+<tr>
+<td>0.41.0</td>
+<td>1.28</td>
+<td>1.33</td>
+</tr>
+<tr>
+<td>0.40.0</td>
+<td>1.28</td>
+<td>1.33</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notes">Notes:<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Kubernetes versions outside these ranges may work but are <strong>not officially supported</strong>.</li>
+<li>Only <strong>x86-64 architectures</strong> are supported. ARM64-based systems are not currently supported.</li>
+<li>Ensure your Helm version is <strong>3.x or later</strong> for all Galasa service releases.</li>
 </ul>
 <h2 id="kubernetes-role-based-access-control">Kubernetes role-based access control<a class="headerlink" href="#kubernetes-role-based-access-control" title="Permanent link">&para;</a></h2>
 <p>If role-based access control (RBAC) is active on your Kubernetes cluster, a user with the <code>galasa-admin</code> role (or a role with equivalent permissions) is needed to run Helm commands on the cluster. The <code>galasa-admin</code> role allows assigned users to run the Helm install, upgrade, and delete commands to interact with the Helm chart. </p>
@@ -6562,16 +6664,16 @@ If you are unsure what login-id to use, try setting up your system without an ow
 <h2 id="running-galasa-tests">Running Galasa tests<a class="headerlink" href="#running-galasa-tests" title="Permanent link">&para;</a></h2>
 <p>Once you have successfully installed the Ecosystem, you can then deploy your Galasa tests to a Maven repository and set up a test stream. For more information on managing tests, see the <a href="../../manage-ecosystem/">Managing tests in a Galasa Ecosystem</a> documentation.</p>
 <h2 id="upgrading-the-galasa-ecosystem">Upgrading the Galasa Ecosystem<a class="headerlink" href="#upgrading-the-galasa-ecosystem" title="Permanent link">&para;</a></h2>
-<p>Get the latest version of the Ecosystem chart and upgrade the Galasa Ecosystem to use the newer version of Galasa - for example version 0.45.0 - by running the following command:</p>
+<p>Get the latest version of the Ecosystem chart and upgrade the Galasa Ecosystem to use the newer version of Galasa - for example version 0.46.0 - by running the following command:</p>
 <p>On Mac or Unix:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>helm<span class="w"> </span>repo<span class="w"> </span>update<span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>helm<span class="w"> </span>upgrade<span class="w"> </span>&lt;release-name&gt;<span class="w"> </span>galasa/ecosystem<span class="w"> </span>--reuse-values<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>--set<span class="w"> </span><span class="nv">galasaVersion</span><span class="o">=</span><span class="m">0</span>.45.0<span class="w"> </span>--wait
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>--set<span class="w"> </span><span class="nv">galasaVersion</span><span class="o">=</span><span class="m">0</span>.46.0<span class="w"> </span>--wait
 </code></pre></div>
 <p>On Windows (Powershell):</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">helm</span> <span class="n">repo</span> <span class="n">update</span> <span class="p">`</span>
 <a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="n">helm</span> <span class="n">upgrade</span> <span class="p">&lt;</span><span class="n">release-name</span><span class="p">&gt;</span> <span class="n">galasa</span><span class="p">/</span><span class="n">ecosystem</span> <span class="p">-</span><span class="n">-reuse-values</span> <span class="p">`</span>
-<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="p">-</span><span class="n">-set</span> <span class="n">galasaVersion</span><span class="p">=</span><span class="n">0</span><span class="p">.</span><span class="n">45</span><span class="p">.</span><span class="n">0</span> <span class="p">-</span><span class="n">-wait</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="p">-</span><span class="n">-set</span> <span class="n">galasaVersion</span><span class="p">=</span><span class="n">0</span><span class="p">.</span><span class="n">46</span><span class="p">.</span><span class="n">0</span> <span class="p">-</span><span class="n">-wait</span>
 </code></pre></div>
 <p>where:</p>
 <ul>
