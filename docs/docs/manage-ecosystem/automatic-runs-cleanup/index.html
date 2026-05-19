@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://galasa.dev/docs/cli-command-reference/installing-offline/">
+        <link rel="canonical" href="https://galasa.dev/docs/manage-ecosystem/automatic-runs-cleanup/">
       
       
-        <link rel="prev" href="../installing-cli-tool/">
+        <link rel="prev" href="../runs-download/">
       
       
-        <link rel="next" href="../cli-command-reference-about/">
+        <link rel="next" href="../runs-delete/">
       
       
       <link rel="icon" href="../../../assets/galasa-icon-white.svg">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Installing the Galasa CLI offline - Galasa</title>
+        <title>Configuring automatic cleanup of test runs - Galasa</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#getting-started" class="md-skip">
+        <a href="#how-the-cleanup-process-works" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Installing the Galasa CLI offline
+              Configuring automatic cleanup of test runs
             
           </span>
         </div>
@@ -657,6 +657,8 @@
       
         
       
+        
+      
     
     
     
@@ -709,8 +711,6 @@
                 
   
   
-    
-  
   
   
     
@@ -736,10 +736,6 @@
       
         
       
-        
-      
-        
-      
     
     
     
@@ -747,15 +743,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../cli-command-reference/" class="md-nav__link ">
               
   
   
@@ -774,7 +770,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             Getting started using the Galasa CLI
@@ -790,12 +786,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../cli-prereqs/" class="md-nav__link">
+      <a href="../../cli-command-reference/cli-prereqs/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    CLI prerequisites online
+    Prerequisites
     
   </span>
   
@@ -813,12 +809,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../zipped-prerequisites/" class="md-nav__link">
+      <a href="../../cli-command-reference/installing-cli-tool/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    CLI prerequisites offline
+    Installing the Galasa CLI
     
   </span>
   
@@ -836,127 +832,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../installing-cli-tool/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Installing the Galasa CLI online
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Installing the Galasa CLI offline
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    Installing the Galasa CLI offline
-    
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
-    <span class="md-ellipsis">
-      Getting started
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#unpacking-the-zip-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      Unpacking the zip file
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuring-the-galasa-cli-for-offline-use" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuring the Galasa CLI for offline use
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#next-steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      Next steps
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cli-command-reference-about/" class="md-nav__link">
+      <a href="../../cli-command-reference/cli-command-reference-about/" class="md-nav__link">
         
   
   
@@ -979,7 +855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../initialising-home-folder/" class="md-nav__link">
+      <a href="../../cli-command-reference/initialising-home-folder/" class="md-nav__link">
         
   
   
@@ -1002,7 +878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../setting-up-galasa-project/" class="md-nav__link">
+      <a href="../../cli-command-reference/setting-up-galasa-project/" class="md-nav__link">
         
   
   
@@ -1025,7 +901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../runs-submit-local/" class="md-nav__link">
+      <a href="../../cli-command-reference/runs-submit-local/" class="md-nav__link">
         
   
   
@@ -1048,7 +924,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../runs-local-debug/" class="md-nav__link">
+      <a href="../../cli-command-reference/runs-local-debug/" class="md-nav__link">
         
   
   
@@ -1071,7 +947,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../viewing-test-results-cli/" class="md-nav__link">
+      <a href="../../cli-command-reference/viewing-test-results-cli/" class="md-nav__link">
         
   
   
@@ -1106,12 +982,6 @@
       
         
           
-        
-      
-        
-      
-        
-      
         
       
         
@@ -1183,30 +1053,7 @@
   
   
   <span class="md-ellipsis">
-    Launching Galasa SimBank online
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../running-simbank-tests/simbank-cli-offline/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Exploring Galasa SimBank offline
+    Launching the SimBank application
     
   </span>
   
@@ -1229,30 +1076,7 @@
   
   
   <span class="md-ellipsis">
-    Running the SimBank tests using the CLI
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../running-simbank-tests/running-simbank-tests-cli-offline/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Running the SimBank tests using the CLI offline
+    Running the sample SimBank tests
     
   </span>
   
@@ -1378,6 +1202,74 @@
 
               
             
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../using-galasa-offline/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Using Galasa offline
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Using Galasa offline
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
               
                 
   
@@ -1385,17 +1277,118 @@
   
   
     <li class="md-nav__item">
-      <a href="../../running-simbank-tests/writing-a-simbank-test/" class="md-nav__link">
+      <a href="../../using-galasa-offline/installing-offline/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Writing your own SimBank test
+    Installing Galasa offline
     
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4_3" id="__nav_3_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Simbank
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Simbank
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using-galasa-offline/simbank-cli-offline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Launching the SimBank application offline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using-galasa-offline/running-simbank-tests-cli-offline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Running the sample SimBank tests offline
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1445,7 +1438,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -1462,14 +1455,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
             <span class="md-nav__icon md-icon"></span>
             Writing your own independent Galasa tests
           </label>
@@ -1649,7 +1642,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -1666,14 +1659,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_5">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
             <span class="md-nav__icon md-icon"></span>
             Configuring Credentials
           </label>
@@ -1752,7 +1745,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -1769,14 +1762,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_6">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
             <span class="md-nav__icon md-icon"></span>
             The Galasa Ecosystem
           </label>
@@ -1980,6 +1973,8 @@
                 
   
   
+    
+  
   
   
     
@@ -2003,6 +1998,8 @@
       
         
       
+        
+      
     
     
     
@@ -2010,15 +2007,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../manage-ecosystem/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -2031,14 +2028,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_7">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_8">
             <span class="md-nav__icon md-icon"></span>
             Managing tests in a Galasa Ecosystem
           </label>
@@ -2053,7 +2050,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../manage-ecosystem/test-streams/" class="md-nav__link">
+      <a href="../test-streams/" class="md-nav__link">
         
   
   
@@ -2076,7 +2073,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../manage-ecosystem/runs-prepare/" class="md-nav__link">
+      <a href="../runs-prepare/" class="md-nav__link">
         
   
   
@@ -2099,7 +2096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../manage-ecosystem/runs-submit/" class="md-nav__link">
+      <a href="../runs-submit/" class="md-nav__link">
         
   
   
@@ -2122,7 +2119,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../manage-ecosystem/runs-reset-cancel/" class="md-nav__link">
+      <a href="../runs-reset-cancel/" class="md-nav__link">
         
   
   
@@ -2145,7 +2142,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../manage-ecosystem/runs-get/" class="md-nav__link">
+      <a href="../runs-get/" class="md-nav__link">
         
   
   
@@ -2168,7 +2165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../manage-ecosystem/runs-download/" class="md-nav__link">
+      <a href="../runs-download/" class="md-nav__link">
         
   
   
@@ -2188,10 +2185,164 @@
                 
   
   
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Configuring automatic cleanup of test runs
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuring automatic cleanup of test runs
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-the-cleanup-process-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How the cleanup process works
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-cleanup-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring cleanup settings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring cleanup settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuring-via-helm-chart" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring via Helm chart
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-via-cps-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring via CPS properties
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#excluding-test-runs-from-cleanup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Excluding test runs from cleanup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Excluding test runs from cleanup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuring-exclusions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring exclusions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-excluding-by-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Excluding by tags
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-excluding-by-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Excluding by result
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-excluding-by-requestor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Excluding by requestor
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
   
   
     <li class="md-nav__item">
-      <a href="../../manage-ecosystem/runs-delete/" class="md-nav__link">
+      <a href="../runs-delete/" class="md-nav__link">
         
   
   
@@ -2239,7 +2390,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -2257,8 +2408,8 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_8">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_9">
             <span class="md-nav__icon md-icon"></span>
             Upgrading
           </label>
@@ -2320,7 +2471,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -2337,14 +2488,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10">
             <span class="md-nav__icon md-icon"></span>
             Managers
           </label>
@@ -2380,7 +2531,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10_2" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -2397,14 +2548,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_9_2" id="__nav_3_9_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_10_2" id="__nav_3_10_2_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_9_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_9_2">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_10_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10_2">
             <span class="md-nav__icon md-icon"></span>
             CICS TS Managers
           </label>
@@ -2492,7 +2643,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10_3" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -2509,14 +2660,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_9_3" id="__nav_3_9_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_10_3" id="__nav_3_10_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_9_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_9_3">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_10_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10_3">
             <span class="md-nav__icon md-icon"></span>
             IMS TM Managers
           </label>
@@ -2585,7 +2736,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10_4" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -2602,14 +2753,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_9_4" id="__nav_3_9_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_10_4" id="__nav_3_10_4_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_9_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_9_4">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_10_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10_4">
             <span class="md-nav__icon md-icon"></span>
             Cloud Managers
           </label>
@@ -2641,10 +2792,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9_4_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10_4_2" >
         
           
-          <label class="md-nav__link" for="__nav_3_9_4_2" id="__nav_3_9_4_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_10_4_2" id="__nav_3_10_4_2_label" tabindex="0">
             
   
   
@@ -2657,8 +2808,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_9_4_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_9_4_2">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_10_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10_4_2">
             <span class="md-nav__icon md-icon"></span>
             Docker Manager
           </label>
@@ -2802,7 +2953,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10_5" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -2819,14 +2970,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_9_5" id="__nav_3_9_5_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_10_5" id="__nav_3_10_5_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_9_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_9_5">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_10_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10_5">
             <span class="md-nav__icon md-icon"></span>
             Communications Managers
           </label>
@@ -2939,7 +3090,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10_6" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -2956,14 +3107,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_9_6" id="__nav_3_9_6_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_10_6" id="__nav_3_10_6_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_9_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_9_6">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_10_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10_6">
             <span class="md-nav__icon md-icon"></span>
             Core Managers
           </label>
@@ -3051,7 +3202,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10_7" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -3068,14 +3219,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_9_7" id="__nav_3_9_7_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_10_7" id="__nav_3_10_7_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_9_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_9_7">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_10_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10_7">
             <span class="md-nav__icon md-icon"></span>
             Logging Managers
           </label>
@@ -3140,7 +3291,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10_8" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -3157,14 +3308,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_9_8" id="__nav_3_9_8_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_10_8" id="__nav_3_10_8_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_9_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_9_8">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_10_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10_8">
             <span class="md-nav__icon md-icon"></span>
             Ecosystem Managers
           </label>
@@ -3233,7 +3384,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10_9" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -3250,14 +3401,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_9_9" id="__nav_3_9_9_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_10_9" id="__nav_3_10_9_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_9_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_9_9">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_10_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10_9">
             <span class="md-nav__icon md-icon"></span>
             Test Tool Managers
           </label>
@@ -3368,7 +3519,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10_10" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -3385,14 +3536,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_9_10" id="__nav_3_9_10_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_10_10" id="__nav_3_10_10_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_9_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_9_10">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_10_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10_10">
             <span class="md-nav__icon md-icon"></span>
             Unix Managers
           </label>
@@ -3457,7 +3608,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10_11" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -3474,14 +3625,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_9_11" id="__nav_3_9_11_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_10_11" id="__nav_3_10_11_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_9_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_9_11">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_10_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10_11">
             <span class="md-nav__icon md-icon"></span>
             Workflow Managers
           </label>
@@ -3572,7 +3723,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10_12" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -3589,14 +3740,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_9_12" id="__nav_3_9_12_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_10_12" id="__nav_3_10_12_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_9_12_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_9_12">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_10_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10_12">
             <span class="md-nav__icon md-icon"></span>
             z/OS Managers
           </label>
@@ -3966,7 +4117,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -3984,8 +4135,8 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_10">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_11">
             <span class="md-nav__icon md-icon"></span>
             FAQs
           </label>
@@ -4031,7 +4182,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -4048,14 +4199,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_11" id="__nav_3_11_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_12" id="__nav_3_12_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_11">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_12">
             <span class="md-nav__icon md-icon"></span>
             Reference
           </label>
@@ -4183,7 +4334,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12_2" >
         
           
           <div class="md-nav__link md-nav__container">
@@ -4200,14 +4351,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3_11_2" id="__nav_3_11_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3_12_2" id="__nav_3_12_2_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_11_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_11_2">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_12_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_12_2">
             <span class="md-nav__icon md-icon"></span>
             Galasactl command-line reference
           </label>
@@ -6171,38 +6322,95 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
+  <a href="#how-the-cleanup-process-works" class="md-nav__link">
     <span class="md-ellipsis">
-      Getting started
+      How the cleanup process works
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#unpacking-the-zip-file" class="md-nav__link">
+  <a href="#configuring-cleanup-settings" class="md-nav__link">
     <span class="md-ellipsis">
-      Unpacking the zip file
+      Configuring cleanup settings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring cleanup settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuring-via-helm-chart" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring via Helm chart
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#configuring-the-galasa-cli-for-offline-use" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#configuring-via-cps-properties" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuring the Galasa CLI for offline use
+      Configuring via CPS properties
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#next-steps" class="md-nav__link">
+  <a href="#excluding-test-runs-from-cleanup" class="md-nav__link">
     <span class="md-ellipsis">
-      Next steps
+      Excluding test runs from cleanup
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Excluding test runs from cleanup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuring-exclusions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring exclusions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-excluding-by-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Excluding by tags
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-excluding-by-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Excluding by result
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-excluding-by-requestor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example: Excluding by requestor
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -6250,7 +6458,7 @@
 
   <!-- Edit button -->
   
-    <a href="https://github.com/galasa-dev/galasa/edit/main/docs/content/docs/cli-command-reference/installing-offline.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/galasa-dev/galasa/edit/main/docs/content/docs/manage-ecosystem/automatic-runs-cleanup.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -6261,112 +6469,98 @@
     
       
     
-    <a href="https://github.com/galasa-dev/galasa/raw/main/docs/content/docs/cli-command-reference/installing-offline.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/galasa-dev/galasa/raw/main/docs/content/docs/manage-ecosystem/automatic-runs-cleanup.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
   
 
 
-  <h1>Installing the Galasa CLI offline</h1>
+  <h1>Configuring automatic cleanup of test runs</h1>
 
-<p>The Galasa <em>isolated.zip</em> file is available from the <a href="https://resources.galasa.dev" target="_blank">https://resources.galasa.dev/</a> site and can be downloaded and extracted to a directory of your choice. The zip file contains three directories (galasactl, maven, and javadoc), an <code>isolated.tar</code> file and a <code>docs.tar</code> file. </p>
-<p>The <code>galasactl</code> directory contains the binaries that are required to run the Galasa command line interface tool (Galasa CLI). The <code>maven</code> directory contains dependencies that are required for running Galasa tests. The <code>javadoc</code> directory contains the Javadoc API documentation for the Galasa Managers.</p>
-<p>The <code>docs.tar</code> file loads a Docker image that enables you to run the Galasa website locally on your machine or on an internal server. Instructions on how to do this are available in the <code>README.txt</code> that is provided in the Galasa zip file. </p>
-<p>The <code>isolated.tar</code> file is an optional Docker image that hosts all the artifacts. You might want to use the Docker image if you want to host Galasa on an internal server that can be accessed by other users. If you want to host Galasa on your local machine only, you do not need to use the Docker image. </p>
-<h2 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
-<p>The Galasa plug-in is accompanied by Galasa SimBank - a demonstration application - which sits on top of a very small middleware layer called SimPlatform (you may see its name in some console messages, but you will otherwise not need to interact with SimPlatform).</p>
-<p>This section describes using the Galasa command line tool (galasactl) to install the Galasa plug-in - together with SimPlatform/SimBank - on your local machine and preparing it to run an initial set of provided tests against a simulated mainframe application.</p>
-<h2 id="unpacking-the-zip-file">Unpacking the zip file<a class="headerlink" href="#unpacking-the-zip-file" title="Permanent link">&para;</a></h2>
-<p>Extract the contents of the zip file into a directory of your choice.</p>
-<p>If you are using the zipped distribution hosted in Docker, ensure that you have the appropriate privileges to run Docker commands on the server on which you are hosting the Galasa artifacts and complete the following steps to load and run the Docker image: </p>
-<p>Note: The example uses port <code>8080</code> but you can use a different port.</p>
+<p>Over time, test run results build up and take up space in the Galasa Ecosystem's Result Archive Store (RAS). To help manage storage, the Galasa service includes an automatic cleanup process that deletes old test runs based on configurable criteria.</p>
+<p>This automatic cleanup process complements the manual deletion capability provided by the <a href="../runs-delete/"><code>galasactl runs delete</code></a> command, allowing you to maintain your test run history without manual intervention.</p>
+<h2 id="how-the-cleanup-process-works">How the cleanup process works<a class="headerlink" href="#how-the-cleanup-process-works" title="Permanent link">&para;</a></h2>
+<p>The cleanup process runs periodically to identify and delete test runs that meet the configured age criteria. By default:</p>
+<ul>
+<li>Test runs older than 30 days are deleted</li>
+<li>The cleanup process runs once every 24 hours</li>
+</ul>
+<p>You can configure both the age threshold and the cleanup frequency to suit your needs.</p>
+<h2 id="configuring-cleanup-settings">Configuring cleanup settings<a class="headerlink" href="#configuring-cleanup-settings" title="Permanent link">&para;</a></h2>
+<p>There are two ways to configure the automatic cleanup process:</p>
 <ol>
-<li>
-<p>Within the directory that contains the Docker image (<code>isolated.tar</code>), run the following command:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker<span class="w"> </span>load<span class="w"> </span>-i<span class="w"> </span>isolated.tar
+<li><strong>Using Helm chart values</strong> - Set values when deploying or upgrading the Galasa service</li>
+<li><strong>Using CPS properties</strong> - Configure settings at runtime without redeploying the Galasa service</li>
+</ol>
+<h3 id="configuring-via-helm-chart">Configuring via Helm chart<a class="headerlink" href="#configuring-via-helm-chart" title="Permanent link">&para;</a></h3>
+<p>When deploying or upgrading the Galasa service using Helm, you can set the following values:</p>
+<ul>
+<li><code>resourceMonitor.testRunCleanupMaxAgeDays</code> - The maximum age in days for test runs before they are deleted (default: 30)</li>
+<li><code>resourceMonitor.testRunCleanupIntervalHours</code> - How often the cleanup process runs, in hours (default: 24)</li>
+</ul>
+<p>Example values file snippet:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">resourceMonitor</span><span class="p">:</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">testRunCleanupMaxAgeDays</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">60</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">testRunCleanupIntervalHours</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">12</span>
 </code></pre></div>
-<p>The following confirmation message is received: <em>Loaded image: ghcr.io/galasa-dev/galasa-isolated:main</em>.</p>
-</li>
-<li>
-<p>Run the container by using the following command: </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>-p<span class="w"> </span><span class="m">8080</span>:80<span class="w"> </span>--name<span class="w"> </span>galasa<span class="w"> </span>ghcr.io/galasa-dev/galasa-isolated:main
+<p>This configuration would delete test runs older than 60 days and run the cleanup process every 12 hours.</p>
+<h3 id="configuring-via-cps-properties">Configuring via CPS properties<a class="headerlink" href="#configuring-via-cps-properties" title="Permanent link">&para;</a></h3>
+<p>You can also configure the cleanup process at runtime by setting Configuration Property Store (CPS) properties. This allows you to adjust settings without redeploying the Galasa service.</p>
+<p>Use the <a href="../../reference/cli-syntax/galasactl_properties_set/"><code>galasactl properties set</code></a> command to configure the following properties in the <code>framework</code> namespace:</p>
+<ul>
+<li><code>framework.ras.cleanup.test.run.age.max.days</code> - The maximum age in days for test runs before they are deleted</li>
+<li><code>framework.ras.cleanup.test.run.age.interval.hours</code> - How often the cleanup process runs, in hours</li>
+</ul>
+<p>Example commands:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>galasactl<span class="w"> </span>properties<span class="w"> </span><span class="nb">set</span><span class="w"> </span>--namespace<span class="w"> </span>framework<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span>--name<span class="w"> </span>ras.cleanup.test.run.age.max.days<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span>--value<span class="w"> </span><span class="m">60</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span>--bootstrap<span class="w"> </span>https://example.com/api/bootstrap
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>galasactl<span class="w"> </span>properties<span class="w"> </span><span class="nb">set</span><span class="w"> </span>--namespace<span class="w"> </span>framework<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span>--name<span class="w"> </span>ras.cleanup.test.run.age.interval.hours<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span>--value<span class="w"> </span><span class="m">12</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span>--bootstrap<span class="w"> </span>https://example.com/api/bootstrap
 </code></pre></div>
-</li>
-<li>
-<p>Go to <code>http:\\localhost:8080</code> to view the running container. </p>
-</li>
-</ol>
-<h2 id="configuring-the-galasa-cli-for-offline-use">Configuring the Galasa CLI for offline use<a class="headerlink" href="#configuring-the-galasa-cli-for-offline-use" title="Permanent link">&para;</a></h2>
-<p>To install Galasa for using in the command-line you first need to select the appropriate binary file for the Galasa CLI from the <code>galasactl</code> directory that is provided in the zip file you downloaded.</p>
-<p>The following versions of the Galasa CLI are available to download for different operating systems and machine architectures:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Operating system</th>
-<th style="text-align: left;">Architecture</th>
-<th style="text-align: left;">Download</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">MacOSX</td>
-<td style="text-align: left;">x86_64</td>
-<td style="text-align: left;">galasactl-darwin-x86_64</td>
-</tr>
-<tr>
-<td style="text-align: left;">MacOSX</td>
-<td style="text-align: left;">arm64</td>
-<td style="text-align: left;">galasactl-darwin-arm64</td>
-</tr>
-<tr>
-<td style="text-align: left;">Linux</td>
-<td style="text-align: left;">x86_64</td>
-<td style="text-align: left;">galasactl-linux-x86_64</td>
-</tr>
-<tr>
-<td style="text-align: left;">Linux arm64</td>
-<td style="text-align: left;">arm64</td>
-<td style="text-align: left;">galasactl-linux-arm64</td>
-</tr>
-<tr>
-<td style="text-align: left;">zLinux</td>
-<td style="text-align: left;">s390x</td>
-<td style="text-align: left;">galasactl-linux-s390x</td>
-</tr>
-<tr>
-<td style="text-align: left;">Windows</td>
-<td style="text-align: left;">x86_64</td>
-<td style="text-align: left;">galasactl-windows-x86_64.exe</td>
-</tr>
-</tbody>
-</table>
-<p>Complete the following steps to install Galasa for using the command line:</p>
-<p>On Mac or Unix:</p>
-<ol>
-<li>
-<p>Find out the architecture of your machine by typing the command <code>uname -m</code> into your terminal. You can use the information that is returned to understand which binary of the Galasa CLI you need to use for your particular machine architecture.</p>
-</li>
-<li>
-<p>Open the <code>galasactl</code> directory that is provided in the zip file and re-name the appropriate binary to <code>galasactl</code>. </p>
-</li>
-<li>
-<p>Add the Galasa CLI to your PATH to enable you to run CLI commands from anywhere on your file system without having to specify the absolute path. To set the path permanently, you need add the Galasa CLI path to your shell's initialization file. For example, if you downloaded the <code>galasactl</code> executable to a folder called <code>~/tools</code> in your home directory, you need to add <code>~/tools</code> to the list of directories that your shell searches through when you enter a command. You can do this by adding the line <code>export PATH=$PATH:$HOME/tools</code> to your shell’s initialization file (for example <code>~/.bashrc</code> or <code>~/.zshrc</code>).</p>
-</li>
-<li>
-<p>Set execute permission on the binary by running the <code>chmod +x galasactl</code> command in the directory containing <code>galasactl</code>. If you are using a Mac, you can set permission to open the Galasa CLI tool by running the <code>xattr -dr com.apple.quarantine galasactl</code> command in the directory containing <code>galasactl</code>.</p>
-</li>
-</ol>
-<p>On Windows (Powershell):</p>
-<ol>
-<li>Open the <code>galasactl</code> directory that is provided in the zip file and re-name the appropriate to <code>galasactl</code>.</li>
-<li>Add the <code>galasactl</code> executable to your PATH to enable the tool to be called from the command line without having to specify the path to the directory in which it is stored. You can edit the PATH variable in your System environment variables to add the path to the directory in which you downloaded the <code>galasactl</code> executable.</li>
-<li>Open a command prompt and type <code>start galasactl.exe</code>.</li>
-</ol>
-<p>You can now run the Galasa CLI tool from any directory in your file system without having to specify the absolute path.</p>
-<h2 id="next-steps">Next steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
-<p>Find out more about the Galasa CLI commands by reading the <a href="../cli-command-reference-about/">Galasa CLI commands</a> documentation.</p>
-<p>Move on to the <a href="../initialising-home-folder/">Initialising your local environment</a> documentation to help you to set up some basic file structures and files in your home folder so that you can start using Galasa.</p>
+<p><strong>Note:</strong> CPS property settings take precedence over Helm chart values. If both are configured, the CPS property values will be used.</p>
+<h2 id="excluding-test-runs-from-cleanup">Excluding test runs from cleanup<a class="headerlink" href="#excluding-test-runs-from-cleanup" title="Permanent link">&para;</a></h2>
+<p>You may want to preserve certain test runs indefinitely, such as baseline results or runs from important releases. You can exclude test runs from the automatic cleanup process by configuring exclusion rules based on test run fields.</p>
+<h3 id="configuring-exclusions">Configuring exclusions<a class="headerlink" href="#configuring-exclusions" title="Permanent link">&para;</a></h3>
+<p>Use the <code>framework.ras.cleanup.test.run.exclude.[FIELD_NAME]</code> CPS property pattern to exclude test runs based on specific field values, where <code>[FIELD_NAME]</code> is the name of the field to filter by.</p>
+<p>The property accepts a comma-separated list of values. Test runs matching any of the specified values for that field will be excluded from cleanup.</p>
+<p>Supported test run field names are:</p>
+<ul>
+<li><code>group</code></li>
+<li><code>requestor</code></li>
+<li><code>result</code></li>
+<li><code>runName</code></li>
+<li><code>status</code></li>
+<li><code>tags</code></li>
+<li><code>user</code></li>
+</ul>
+<h3 id="example-excluding-by-tags">Example: Excluding by tags<a class="headerlink" href="#example-excluding-by-tags" title="Permanent link">&para;</a></h3>
+<p>To exclude test runs that are tagged with <code>keepMe</code> or <code>doNotDelete</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>galasactl<span class="w"> </span>properties<span class="w"> </span><span class="nb">set</span><span class="w"> </span>--namespace<span class="w"> </span>framework<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span>--name<span class="w"> </span>ras.cleanup.test.run.exclude.tags<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span>--value<span class="w"> </span>keepMe,doNotDelete<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span>--bootstrap<span class="w"> </span>https://example.com/api/bootstrap
+</code></pre></div>
+<p>Any test run with either the <code>keepMe</code> or <code>doNotDelete</code> tag will be preserved, regardless of its age.</p>
+<h3 id="example-excluding-by-result">Example: Excluding by result<a class="headerlink" href="#example-excluding-by-result" title="Permanent link">&para;</a></h3>
+<p>To exclude test runs that failed or had environmental failures:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>galasactl<span class="w"> </span>properties<span class="w"> </span><span class="nb">set</span><span class="w"> </span>--namespace<span class="w"> </span>framework<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span>--name<span class="w"> </span>ras.cleanup.test.run.exclude.result<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span>--value<span class="w"> </span>Failed,EnvFail<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span>--bootstrap<span class="w"> </span>https://example.com/api/bootstrap
+</code></pre></div>
+<h3 id="example-excluding-by-requestor">Example: Excluding by requestor<a class="headerlink" href="#example-excluding-by-requestor" title="Permanent link">&para;</a></h3>
+<p>To exclude test runs submitted by specific requestors:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>galasactl<span class="w"> </span>properties<span class="w"> </span><span class="nb">set</span><span class="w"> </span>--namespace<span class="w"> </span>framework<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span>--name<span class="w"> </span>ras.cleanup.test.run.exclude.requestor<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span>--value<span class="w"> </span>alice,bob<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span>--bootstrap<span class="w"> </span>https://example.com/api/bootstrap
+</code></pre></div>
 
 
 
@@ -6405,7 +6599,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../installing-cli-tool/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Installing the Galasa CLI online">
+          <a href="../runs-download/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Downloading test artifacts">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -6415,20 +6609,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Installing the Galasa CLI online
+                Downloading test artifacts
               </div>
             </div>
           </a>
         
         
           
-          <a href="../cli-command-reference-about/" class="md-footer__link md-footer__link--next" aria-label="Next: Galasa CLI commands">
+          <a href="../runs-delete/" class="md-footer__link md-footer__link--next" aria-label="Next: Deleting test run results">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Galasa CLI commands
+                Deleting test run results
               </div>
             </div>
             <div class="md-footer__button md-icon">
