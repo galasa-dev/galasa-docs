@@ -6,7 +6,7 @@
 openapi: 3.0.3
 info:
   title: Galasa Ecosystem API
-  version : "0.48.1"
+  version : "1.0.0"
   description: The Galasa Ecosystem REST API allows you to interact with a Galasa Ecosystem.
   contact:
     url: https://galasa.dev/support
@@ -3210,7 +3210,7 @@ components:
               $ref: '#/components/schemas/GalasaSecretType'
               description: |
                 The type of the Galasa Secret resource. Supported types are 'UsernamePassword', 'Username',
-                'UsernameToken', 'Token', 'KeyStore'.
+                'UsernameToken', 'Token', 'KeyStore', 'Opaque'.
         data:
           type: object
           properties:
@@ -3251,10 +3251,16 @@ components:
               description: |
                 The type of the KeyStore. Optional, defaults to 'PKCS12' if not specified.
                 Supported values are 'PKCS12' and 'JKS'. Only used when the Secret 'type' is set to 'KeyStore'.
+            opaqueData:
+              type: string
+              description: |
+                An opaque value (e.g. a licence JAR file). Required if the Secret 'type' is set to 'Opaque'.
+                If the 'encoding' has been set in the metadata, this value must already be encoded with
+                the given encoding scheme (e.g. base64).
     GalasaSecretType:
       type: string
       description: The type of a Galasa Secret
-      enum: [UsernamePassword, Username, UsernameToken, Token, KeyStore]
+      enum: [UsernamePassword, Username, UsernameToken, Token, KeyStore, Opaque]
     
     GalasaTag:
       type: object
@@ -3368,7 +3374,9 @@ components:
                 Currently, base64 is the only supported encoding scheme
         keystore:
           type: object
-          description: The keystore to create or update in the Credentials Store. Cannot be used alongside 'password' or 'token'
+          description: |
+            The keystore to create or update in the Credentials Store. Cannot be used alongside 'password' or 'token'.
+            When 'keystore' is provided on an update request, 'keystorePassword' must also be provided.
           properties:
             value:
               type: string
@@ -3380,11 +3388,13 @@ components:
                 Currently, base64 is the only supported encoding scheme
         keystorePassword:
           type: object
-          description: The password for the KeyStore. Optional - can be null or empty for password-less KeyStores. Only used when 'keystore' is provided.
+          description: |
+            The password for the KeyStore. When 'keystorePassword' is provided on an update request, 'keystore'
+            must also be provided. An empty string ("") is a valid value indicating a password-less KeyStore.
           properties:
             value:
               type: string
-              description: The password value for the KeyStore
+              description: The password value for the KeyStore. May be an empty string to indicate no password.
             encoding:
               type: string
               description: |
@@ -3394,7 +3404,21 @@ components:
           type: string
           description: |
             The type of the KeyStore. Optional, defaults to 'PKCS12' if not specified.
-            Supported values are 'PKCS12' and 'JKS'. Only used when 'keystore' is provided.
+            Supported values are 'PKCS12' and 'JKS'. Can be supplied on its own to update only the keystore type.
+        opaque:
+          type: object
+          description: |
+            An opaque value to create or update in the Credentials Store. Cannot be used alongside 'username',
+            'password', 'token', 'keystore', 'keystoreType' or 'keystorePassword'.
+          properties:
+            value:
+              type: string
+              description: The base64-encoded opaque value to set into the secret
+            encoding:
+              type: string
+              description: |
+                The character encoding scheme that has been applied to the opaque value.
+                Currently, base64 is the only supported encoding scheme
     TagCreateRequest:
       type: object
       properties:
